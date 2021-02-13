@@ -17,10 +17,16 @@ echo $telp.'<br>';
 echo $hak_akses.'<br>';*/
 
 	$insert=mysql_query("insert into tb_atribut values ('$max_id','$indikator','$pertanyaan')")or die(mysql_error());
-	
+    
+    // var_dump($insert);
 	if ($insert == 1) {
+        // echo"true";
+        // header('Location: '.base()."atribut");
     ?>
     <script>
+    window.location = "<?php echo base() ?>atribut";
+</script>
+    <!-- <script>
         swal({
             title: 'Success',
             text: '',
@@ -28,11 +34,15 @@ echo $hak_akses.'<br>';*/
         }).then(function () {
             window.location.href = "<?php echo base() ?>atribut";
         });
-    </script>
+    </script> -->
+    
     <?php
 } else {
     ?>
     <script>
+    window.location = "<?php echo base() ?>atribut";
+</script>
+    <!-- <script>
         swal({
             title: 'Failed',
             text: '',
@@ -40,7 +50,7 @@ echo $hak_akses.'<br>';*/
         }).then(function () {
             window.location.href = "<?php echo base() ?>atribut";
         });
-    </script>
+    </script> -->
     <?php
 }
 ?>
