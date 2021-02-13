@@ -13,7 +13,11 @@ $where = array('nis' => $_POST["nis"]);
 $insert = $crud->update("siswa", $where, $data);
 if ($insert == 1) {
     ?>
+    
     <script>
+    window.location = "<?php echo base() ?>siswa";
+</script>
+    <!-- <script>
         swal({
             title: 'Success',
             text: '',
@@ -21,11 +25,15 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>siswa";
         });
-    </script>
+    </script> -->
     <?php
 } else {
     ?>
+    
     <script>
+    window.location = "<?php echo base() ?>siswa";
+</script>
+    <!-- <script>
         swal({
             title: 'Failed',
             text: '',
@@ -33,7 +41,7 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>siswa";
         });
-    </script>
+    </script> -->
     <?php
 }
 ?>

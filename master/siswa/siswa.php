@@ -26,7 +26,7 @@
 	
 		<div  class="card-header">
 			
-			  DATA SISWA
+			  DATA USER KUISIONER
 			  
             <a href="<?php base() ?>siswa_tambah" >
                 <button style="float:right;"  class="btn btn-primary btn-sm"  >
@@ -50,7 +50,7 @@
                 <thead>
                     <tr>
                         <th style="font-size:11px;width:10px;">NO</th>
-                        <th style="font-size:11px;">NIS</th>
+                        <th style="font-size:11px;">KODE</th>
                         <th style="font-size:11px;">NAMA</th>
                         <th style="font-size:11px;">JENIS KELAMIN</th>
                         <th style="font-size:11px;">ALAMAT</th>
@@ -58,6 +58,7 @@
                         <th style="font-size:11px;">JURUSAN</th>
                         <th style="font-size:11px;">USERNAME</th>
                         <th style="font-size:11px;">PASSWORD</th>
+                        <th style="font-size:11px;">STATUS</th>
                         <th style="font-size:11px;">OPSI</th>
                     </tr>
                 </thead>
@@ -84,11 +85,15 @@
                                 <td style="font-size:12px;"><?php echo $data['Jurusan'] ?></td>
                                 <td style="font-size:12px;"><?php echo $data['username'] ?></td>
                                 <td style="font-size:12px;"><?php echo $data['Psd_v'] ?></td>
+                                <td style="font-size:12px;"><?php echo $data['kategori'] ?></td>
                                	<td>
                                     <a style="text-decoration:none;" href="<?php base() ?>siswa_edit/<?php echo $data["nis"] ?>">
                                         <button class="btn btn-warning btn-sm">Edit</button>
                                     </a>
-                                    <button id="<?php echo $data["nis"] ?>" class="btn btn-danger btn-sm bt_hapus">Hapus</button>
+                                    <a style="text-decoration:none;" href="<?php base() ?>siswa_hapus2/<?php echo $data["nis"] ?>">
+														<button class="btn btn-danger btn-sm bt_hapus">Hapus</button>
+													</a>
+                                    <!-- <button id="<?php echo $data["nis"] ?>" class="btn btn-danger btn-sm bt_hapus">Hapus</button> -->
                                     <a style="text-decoration:none;" href="<?php base() ?>siswa_detail/<?php echo $data["nis"] ?>">
                                         <button class="btn btn-success btn-sm">Detail</button>
                                     </a>

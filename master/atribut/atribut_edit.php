@@ -22,7 +22,7 @@ $r = $crud->record("tb_atribut", $w);
             Edit Atribut
         </div>
         <div class="card-block">
-            <form id="form" action="<?php base() ?>indikator_ganti" method="post" data-toggle="validator" role="form">
+            <form id="form" action="<?php base() ?>atribut_ganti" method="post" data-toggle="validator" role="form">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -38,7 +38,7 @@ $r = $crud->record("tb_atribut", $w);
 						
 						<div class="form-group">
 						<label >Nama Indikator</label>
-                            <select class="form-control required="" select" name="indikator">
+                            <select class="form-control required="" select" name="kd_indikator">
 							<option value="">Pilih</option>
 							<?php
 							include ('connection.php');

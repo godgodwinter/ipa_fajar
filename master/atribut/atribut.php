@@ -96,7 +96,10 @@
                                                       <a style="text-decoration:none;" href="<?php base() ?>atribut_edit/<?php echo $data["kd_atribut"] ?>">
 														<button class="btn btn-warning btn-sm">Edit</button>
 													</a>
-														<button id="<?php echo $data["kd_atribut"] ?>" class="btn btn-danger btn-sm bt_hapus">Hapus</button>
+                                                    <a style="text-decoration:none;" href="<?php base() ?>atribut_hapus/<?php echo $data["kd_atribut"] ?>">
+														<button class="btn btn-danger btn-sm bt_hapus">Hapus</button>
+													</a>
+														<!-- <button id="<?php echo $data["kd_atribut"] ?>" class="btn btn-danger btn-sm bt_hapus">Hapus</button> -->
 													
                                                    </td>
                                                </tr>

@@ -47,6 +47,9 @@
        case 'atribut_data':
            include './master/atribut/atribut_data.php';
        break;
+	    case 'atribut_hapus':
+           include './master/atribut/_hapus2.php';
+       break;
        case 'atribut_tambah':
            include './master/atribut/atribut_tambah.php';
        break;
@@ -82,6 +85,9 @@
        break;
        case 'siswa':
            include './master/siswa/siswa.php';
+       break;
+	    case 'siswa_hapus2':
+           include './master/siswa/_hapus2.php';
        break;
 	   case 'siswa_simpan':
            include './master/siswa/_simpan.php';

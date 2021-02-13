@@ -5,9 +5,13 @@ $data = array(
 );
 $where = array('kd_atribut' => $_POST["kd_atribut"]);
 $insert = $crud->update("tb_atribut", $where, $data);
+var_dump($insert);
 if ($insert == 1) {
     ?>
-    <script>
+     <script>
+    window.location = "<?php echo base() ?>atribut";
+</script>
+    <!-- <script>
         swal({
             title: 'Success',
             text: '',
@@ -15,11 +19,14 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>atribut_data/<?php echo $_POST["kd_indikator"]?>";
         });
-    </script>
+    </script> -->
     <?php
 } else {
     ?>
-    <script>
+     <script>
+    window.location = "<?php echo base() ?>atribut";
+</script>
+    <!-- <script>
         swal({
             title: 'Failed',
             text: '',
@@ -27,7 +34,7 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>atribut_data/<?php echo $_POST["kd_indikator"]?>";
         });
-    </script>
+    </script> -->
     <?php
 }
 ?>

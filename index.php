@@ -370,6 +370,12 @@ if ($_SESSION["status"] == "A") {
     <script src="<?php base() ?>admin-style/files/assets/js/pcoded.min.js"></script>
     <script src="<?php base() ?>admin-style/files/assets/js/vartical-layout.min.js"></script>
     <script type="text/javascript" src="<?php base() ?>admin-style/files/assets/js/script.js"></script>
+
+    
+    <!-- <script src="<?php echo $link ?>boostrap4/jquery-1.11.3.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="<?php echo $link ?>plugin/sweetalert2/dist/sweetalert2.min.css">
+            <script src="<?php echo $link ?>plugin/sweetalert2/dist/sweetalert2.min.js"></script>  -->
+           
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>

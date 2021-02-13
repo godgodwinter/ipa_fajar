@@ -14,7 +14,10 @@ $data = array(
 $insert = $crud->insert("siswa", $data);
 if ($insert == 1) {
     ?>
-    <script>
+     <script>
+    window.location = "<?php echo base() ?>siswa";
+</script>
+    <!-- <script>
         swal({
             title: 'Success',
             text: '',
@@ -22,11 +25,15 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>siswa";
         });
-    </script>
+    </script> -->
     <?php
 } else {
     ?>
+    
     <script>
+    window.location = "<?php echo base() ?>siswa";
+</script>
+    <!-- <script>
         swal({
             title: 'Failed',
             text: '',
@@ -34,7 +41,7 @@ if ($insert == 1) {
         }).then(function () {
             window.location.href = "<?php echo base() ?>siswa";
         });
-    </script>
+    </script> -->
     <?php
 }
 ?>
