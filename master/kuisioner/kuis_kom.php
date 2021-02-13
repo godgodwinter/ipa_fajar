@@ -243,6 +243,7 @@ else{
       <label for="comment">Kritik Saran :</label>
       <textarea class="form-control" required="required" Placeholder=" Kritik Dan Saran" rows="5" name="kritik_saran"></textarea>
 	  <input type="hidden" name="batas" class="form-control" value="<?php echo $nmc ?>" readonly>
+	  <input type="hidden" name="username" class="form-control" value="<?php echo $_SESSION["username"] ?>" readonly>
 	  
     </div>
 </form>

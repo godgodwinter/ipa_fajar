@@ -146,6 +146,7 @@ else if(rataperbagiimp<0.34)
 		<div class="content-box-large panel-heading" style="background-color:yellow;">
 			<center>
 					<font class="panel-title " style="color:green">Karena Rata-rata P/I adalah <?php echo round($totperbagiimp/$no,3);?> Berarti <?php echo $hslsatu ?></font>
+					<!-- <font class="panel-title " style="color:green">Karena Rata-rata P/I adalah <?php echo round($totperbagiimp/$no,3);?> Berarti <?php echo $hslsatu ?></font> -->
 			</center>
 		</div>
 	</div>
@@ -183,6 +184,30 @@ $rataperbagiimp = $rataperbagiimp*100;
 				</table>
 			</div>
 		</div>
+<?php
+//kesimpulan
+$kesimpulan='';
+$hasilakhir=$rataperbagiimp;
+if($hasilakhir<70){
+	$kesimpulan='Perlu di tingkatkan';
+}else{
+	$kesimpulan='Perlu di Pertahankan';
+}
+?>
+		<div class="col-md-12">
+		<div class="col-md-12 panel-info">
+			<div class="content-box-header panel-heading">
+				<div class="panel-title "><H1>KESIMPULAN</H1></div>
+			</div>
+			<div class="content-box-large panel-heading" style="background-color:yellow;">
+			<center>
+					<font class="panel-title " style="color:green">Karena Persentase menunjukkan angka <?php echo $rataperbagiimp.'%' ?> Berarti <strong><?php echo $kesimpulan; ?></strong></font>
+					<!-- <font class="panel-title " style="color:green">Karena Rata-rata P/I adalah <?php echo round($totperbagiimp/$no,3);?> Berarti <?php echo $kesimpulan; ?></font> -->
+			</center>
+		</div>
+		</div>
+		
+	</div>
 
 </div>
 <!----------------------------------End Tahap I----------------------------------------------------------------------->
@@ -298,7 +323,7 @@ for($xx=1;$xx<=$no;$xx++){
 <div id="Prioritas" class="tabcontent">
 <div class="col-md-12 panel-info">
 	<div class="content-box-large box-with-header">
-	<a href="./master/laporan/report.php" target="_blank" class="btn btn-info btn-lg navbar-right"><span class="glyphicon glyphicon-print"></span> Cetak</a><br>
+	<a href="./master/laporan/report2.php" target="_blank" class="btn btn-info btn-lg navbar-right"><span class="glyphicon glyphicon-print"></span> Cetak</a><br>
 <?php
 mysql_query("delete from temp_laporan");
 for($yy=4;$yy>=1;$yy--){

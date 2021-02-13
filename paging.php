@@ -131,7 +131,9 @@
 	    case 'report':
            include './master/laporan/report.php';
        break;
-       
+         case 'report2':
+           include './master/laporan/report2.php';
+       break;
    }
 
 ?>

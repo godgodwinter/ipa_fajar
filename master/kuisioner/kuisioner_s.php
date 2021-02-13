@@ -8,13 +8,14 @@ $max_id = sprintf('%011s', $max);
 
 $batas = $_POST['batas'];
 $saran = $_POST['saran'];
+$username = $_POST['username'];
 $hariini = date('Y-m-d');
 echo $saran."<br>";
 echo $id_user_user."<br>";
 echo $hariini."<br>";
 
 mysql_query("delete from t_kuisioner where id_user='$id_user_user' and waktu_kuisioner='$hariini'");
-mysql_query("insert into t_kuisioner values ('$max_id','$id_user_user','$hariini')");
+mysql_query("insert into t_kuisioner values ('$max_id','$id_user_user','$hariini','$username')");
 mysql_query("delete from t_detail_kuisioner where kd_kuesioner='$max_id'");
 
 for($a=0;$a<$batas;$a++){

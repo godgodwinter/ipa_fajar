@@ -32,11 +32,12 @@ $max_id = sprintf('%02s', $max);
 
 	$batas = $_POST['batas'];
 	$saran = $_POST['kritik_saran'];
+	$username = $_POST['username'];
 	$hariini = date('Y-m-d');
 	echo $hariini."<br>";
 	echo $saran."<br>";
 	
-mysql_query("insert into tb_kuesioner values ('$max_id','$hariini','$saran')");
+mysql_query("insert into tb_kuesioner values ('$max_id','$hariini','$saran','$username')");
 	
 $c= 0;
 $sqlk = mysql_query("SELECT * FROM tb_atribut");
