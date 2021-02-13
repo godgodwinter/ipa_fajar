@@ -70,6 +70,25 @@
                             <label>Password</label>
                             <input required="" type="password" class="form-control" id="password"  name="password" placeholder="Password">
                         </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Kategori User</label>
+                            <select required="" class="form-control" id="kategori" name="kategori" style="font-size:13px;">
+                                <?php
+                                // if ($r["kategori"] == "L") {
+                                //     $L = "selected";
+                                //     $P = "";
+                                // } else {
+                                //     $P = "selected";
+                                //     $L = "";
+                                // }
+                                ?>
+                                <option value="">-Kategori User-</option>
+                                <option>Guru</option>
+                                <option>Kepala Sekolah</option>
+                                <option>Petugas</option>
+                                <option>Siswa</option>
+                            </select>
+                        </div>
 						<div class="form-group" style="padding-top:32px;">
                             <button type="submit" class="btn btn-info">Simpan</button>
                             <a href="<?php base() ?>siswa">

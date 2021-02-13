@@ -7,6 +7,7 @@ $data = array(
     'username' => $_POST["username"],
     'password' => md5($_POST["password"]),
     'psd_v' => $_POST["password"],
+	'kategori' => $_POST["kategori"],
     
 );
 $where = array('nis' => $_POST["nis"]);

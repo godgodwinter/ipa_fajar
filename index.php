@@ -209,7 +209,7 @@ if ($_SESSION["status"] == "A") {
                                         </li>
                                         <li class=" ">
                                         <a  href="<?php base() ?>siswa">
-                                                <span class="pcoded-mtext" >Siswa</span>
+                                                <span class="pcoded-mtext" >User Kuisioner</span>
                                             </a>
                                         </li>
                                      <li class=" ">

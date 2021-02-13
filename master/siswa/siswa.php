@@ -31,7 +31,7 @@
             <a href="<?php base() ?>siswa_tambah" >
                 <button style="float:right;"  class="btn btn-primary btn-sm"  >
                     <i  class="fa fa-plus-square" aria-hidden="true"></i>
-                    Tambah Siswa
+                    Tambah User Kuisioner
                 </button>
             </a>
         </div>
@@ -54,11 +54,11 @@
                         <th style="font-size:11px;">NAMA</th>
                         <th style="font-size:11px;">JENIS KELAMIN</th>
                         <th style="font-size:11px;">ALAMAT</th>
-                        <th style="font-size:11px;">KELAS</th>
-                        <th style="font-size:11px;">JURUSAN</th>
+                        <!-- <th style="font-size:11px;">KELAS</th>
+                        <th style="font-size:11px;">JURUSAN</th> -->
                         <th style="font-size:11px;">USERNAME</th>
-                        <th style="font-size:11px;">PASSWORD</th>
-                        <th style="font-size:11px;">STATUS</th>
+                        <!-- <th style="font-size:11px;">PASSWORD</th> -->
+                        <th style="font-size:11px;">KATEGORI USER</th>
                         <th style="font-size:11px;">OPSI</th>
                     </tr>
                 </thead>
@@ -81,10 +81,10 @@
                                     }
                                     ?></td>
                                 <td style="font-size:12px;"><?php echo $data['alamat'] ?></td>
-                                <td style="font-size:12px;"><?php echo $data['Kelas'] ?></td>
-                                <td style="font-size:12px;"><?php echo $data['Jurusan'] ?></td>
+                                <!-- <td style="font-size:12px;"><?php echo $data['Kelas'] ?></td>
+                                <td style="font-size:12px;"><?php echo $data['Jurusan'] ?></td> -->
                                 <td style="font-size:12px;"><?php echo $data['username'] ?></td>
-                                <td style="font-size:12px;"><?php echo $data['Psd_v'] ?></td>
+                                <!-- <td style="font-size:12px;"><?php echo $data['Psd_v'] ?></td> -->
                                 <td style="font-size:12px;"><?php echo $data['kategori'] ?></td>
                                	<td>
                                     <a style="text-decoration:none;" href="<?php base() ?>siswa_edit/<?php echo $data["nis"] ?>">

@@ -88,7 +88,26 @@ $r = $crud->record("siswa", $w);
                             <label>Password Baru</label>
                             <input value="<?php echo $r["Psd_v"] ?>"  required="" type="password" class="form-control" id="password"  name="password">
                         </div>
-                        
+                        <div class="form-group">
+                            <label for="exampleSelect1">Kategori User</label>
+                            <select required="" class="form-control" id="kategori" name="kategori" style="font-size:13px;">
+                                <?php
+                                // if ($r["kategori"] == "L") {
+                                //     $L = "selected";
+                                //     $P = "";
+                                // } else {
+                                //     $P = "selected";
+                                //     $L = "";
+                                // }
+                                ?>
+                                <option><?php echo $r["kategori"] ?></option>
+                                <option value="">-Kategori User-</option>
+                                <option>Guru</option>
+                                <option>Kepala Sekolah</option>
+                                <option>Petugas</option>
+                                <option>Siswa</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-success">Edit</button>
                             <a href="<?php base() ?>siswa">

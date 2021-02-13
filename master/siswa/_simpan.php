@@ -8,7 +8,8 @@ $data = array(
     'jurusan' => $_POST["jurusan"],
     'username' => $_POST["username"],
     'password' => md5($_POST["password"]),
-	'Psd_v' => $_POST["password"]
+	'Psd_v' => $_POST["password"],
+	'kategori' => $_POST["kategori"]
    
 );
 $insert = $crud->insert("siswa", $data);
