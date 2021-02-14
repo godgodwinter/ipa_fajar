@@ -83,6 +83,9 @@
        case 'analisis':
            include './master/analisis/analisis.php';
        break;
+	    case 'analisis_simpan':
+           include './master/analisis/_simpan.php';
+       break;
        case 'siswa':
            include './master/siswa/siswa.php';
        break;
@@ -133,6 +136,15 @@
        break;
          case 'report2':
            include './master/laporan/report2.php';
+       break;
+	    case 'ipatahunan':
+           include './master/ipatahunan/ipatahunan.php';
+       break;
+	   case 'ipatahunan_hapus':
+           include './master/ipatahunan/_hapus.php';
+       break;
+	   case 'analisis_reset':
+           include './master/ipatahunan/_reset.php';
        break;
    }
 

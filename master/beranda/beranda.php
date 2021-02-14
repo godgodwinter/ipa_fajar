@@ -1,16 +1,61 @@
+<?php
+mysql_connect("localhost", "root", "") or 
+	die (mysql_error());
+
+	mysql_select_db("fajar_ipa") or
+	die (mysql_error());
+//Filtering tahun mulai analisis...............................1
+$bulan_mulai = date('Y');
+$bulan_sampai = date('Y');
+$kueri1 = mysql_query("select * from laporan");
+$kueri2 = mysql_query("select * from laporan");
+// $responden = mysql_num_rows($kueri1);
+//echo "responden : ".$responden;
+// while($data3=mysql_fetch_object($kueri1)){
+//     //Perhitungan TKI dan Persentase..............................................4
+//             $tahun = $data3->tahun;
+//             $poi = $data3->poi;
+//             $persentase = $data3->persentase;
+//             echo $poi;
+// }
+	?>
+    
 <div class="col-md-12" style="margin-top:30px;">
     
 </div>
+<div class="container">
+
 <canvas id="myChart" width="400" height="400"></canvas>
+</div>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: [
+            <?php
+            while($data3=mysql_fetch_object($kueri1)){
+    //Perhitungan TKI dan Persentase..............................................4
+            $tahun = $data3->tahun;
+            $poi = $data3->poi;
+            $persentase = $data3->persentase;
+            echo "'$tahun',";
+}
+?>
+            ],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [
+                <?php
+            while($data3=mysql_fetch_object($kueri2)){
+    //Perhitungan TKI dan Persentase..............................................4
+            $tahun = $data3->tahun;
+            $poi = $data3->poi;
+            $persentase = $data3->persentase;
+            echo "'$poi',";
+}
+?>
+],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

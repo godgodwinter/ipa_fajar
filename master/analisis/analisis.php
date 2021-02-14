@@ -187,12 +187,14 @@ $rataperbagiimp = $rataperbagiimp*100;
 <?php
 //kesimpulan
 $kesimpulan='';
-$hasilakhir=$rataperbagiimp;
+$hasilakhir=round($rataperbagiimp,3);
 if($hasilakhir<70){
 	$kesimpulan='Perlu di tingkatkan';
 }else{
 	$kesimpulan='Perlu di Pertahankan';
 }
+// $persentase=round($totperbagiimp/$no,3);
+$poi=round($totperbagiimp/$no,3);
 ?>
 		<div class="col-md-12">
 		<div class="col-md-12 panel-info">
@@ -202,7 +204,7 @@ if($hasilakhir<70){
 			<div class="content-box-large panel-heading" style="background-color:yellow;">
 			<center>
 					<font class="panel-title " style="color:green">Karena Persentase menunjukkan angka <?php echo $rataperbagiimp.'%' ?> Berarti <strong><?php echo $kesimpulan; ?></strong></font>
-					<!-- <font class="panel-title " style="color:green">Karena Rata-rata P/I adalah <?php echo round($totperbagiimp/$no,3);?> Berarti <?php echo $kesimpulan; ?></font> -->
+					<!-- <font class="panel-title " style="color:green">Karena Rata-rata P/I adalah <?php echo $persentase; ?> Berarti <?php echo $kesimpulan; ?></font> -->
 			</center>
 		</div>
 		</div>
@@ -210,6 +212,79 @@ if($hasilakhir<70){
 	</div>
 
 </div>
+<div class="card-block">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+            <form id="form" action="<?php base() ?>analisis_simpan" method="post" data-toggle="validator" role="form">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+						<p>Pilih Tahun: <input type="text" name="tahun" id="datepicker" class="form-control" value="<?php echo date("Y"); ?>
+"/></p>
+						<input type="hidden" value="<?=$poi;?>" name="poi" class="form-control"/>
+						<input type="hidden" value="<?=$hasilakhir;?>" name="persentase" class="form-control"/>
+                              </div>
+						<scRipt>$(function() {
+  $('#datepicker').datepicker({
+    changeYear: true,
+    showButtonPanel: true,
+    dateFormat: 'yy',
+    onClose: function(dateText, inst) {
+      var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+      $(this).datepicker('setDate', new Date(year, 1));
+    }
+  });
+
+  $("#datepicker").focus(function() {
+    $(".ui-datepicker-month").hide();
+    $(".ui-datepicker-calendar").hide();
+  });
+
+});</scRipt>
+	
+						<div class="form-group" style="padding-top:32px;">
+                            <button type="submit" class="btn btn-info">Simpan</button>
+                           
+                        </div>
+						
+                    </div>
+                    
+                </div>
+            </form>
+            <script>
+                // $(document).ready(function () {
+                //     $('#form').validator().on('submit', function (e) {
+                //         if (e.isDefaultPrevented()) {
+                //             var nama = $("#nama").val();                            
+                //             var jk = $("#jk").val();
+                //             var alamat = $("#alamat").val();
+                //             var username = $("#username").val();
+                //             var pass = $("#password").val();                            
+                //             if (nama == "") {
+                //                 $("#nama").focus();
+                //                 swal("Nama Harus Di Isi");
+                //             }  else if (jk == "") {
+                //                 $("#jk").focus();
+                //                 swal("Jenis Kelamin Harus Dipilih");
+                //             } else if (alamat == "") {
+                //                 $("#alamat").focus();
+                //                 swal("Alamat Harus Diisi");
+                //             } else if (username == "") {
+                //                 $("#username").focus();
+                //                 swal("Username Harus Diisi");
+                //             } else if (pass == "") {
+                //                 $("#password").focus();
+                //                 swal("Password Harus Diisi");
+                //             }  else {
+                //             // everything looks good!
+                //         }
+                //     });
+                // });
+            </script>
+			
+        </div>
 <!----------------------------------End Tahap I----------------------------------------------------------------------->
 <!----------------------------------Begin Tahap II----------------------------------------------------------------------->
 <div id="Tahap II & III" class="tabcontent">

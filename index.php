@@ -62,7 +62,8 @@ if ($_SESSION["status"] == "A") {
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="<?php base() ?>admin-style/files/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php base() ?>admin-style/files/assets/css/jquery.mCustomScrollbar.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>/head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    </head>
 
 <body>
     <!-- Pre-loader start -->
@@ -234,6 +235,12 @@ if ($_SESSION["status"] == "A") {
                                     <a href="<?php base() ?>analisis">
                                         <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
                                         <span class="pcoded-mtext">Analisis</span>
+                                    </a>
+                                </li>
+                                <li class="" style="display:<?php echo $analisis ?>">
+                                    <a href="<?php base() ?>ipatahunan">
+                                        <span class="pcoded-micon"><i class="feather icon-menu"></i></span>
+                                        <span class="pcoded-mtext">IPA</span>
                                     </a>
                                 </li>
                                 <li class="" style="display:<?php echo $kuisioner ?>">
